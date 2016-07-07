@@ -154,7 +154,9 @@ func cloneGit(s string) {
 		}
 	}
 
+	run("src", "ls", "-la")
 	run("src", "/usr/local/bin/git-restore-mtime", ".")
+	run("src", "ls", "-la")
 }
 
 // run optionally changes into a directory then executes the command and args
